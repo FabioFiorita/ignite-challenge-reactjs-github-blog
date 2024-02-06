@@ -6,8 +6,11 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      maxWidth: {
+        '4xl': '60rem',
+      },
+    },
   },
   plugins: [],
 }
-
