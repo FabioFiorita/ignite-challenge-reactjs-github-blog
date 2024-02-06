@@ -1,16 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       maxWidth: {
-        '4xl': '60rem',
+        '4xl': '864px',
+      },
+      minWidth: {
+        '4xl': '864px',
       },
     },
   },
-  plugins: [],
+  plugins: ['@tailwindcss/line-clamp'],
 }
