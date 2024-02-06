@@ -1,10 +1,16 @@
-import { Header } from './components/Header'
+import { BrowserRouter } from 'react-router-dom'
+import { Router } from './Router'
+import { IssueProvider } from './contexts/IssueContext'
+import { IssuesProvider } from './contexts/IssuesContext'
 
 export function App() {
   return (
-    <>
-      <Header />
-      <div>Hello</div>
-    </>
+    <BrowserRouter>
+      <IssuesProvider>
+        <IssueProvider>
+          <Router />
+        </IssueProvider>
+      </IssuesProvider>
+    </BrowserRouter>
   )
 }
